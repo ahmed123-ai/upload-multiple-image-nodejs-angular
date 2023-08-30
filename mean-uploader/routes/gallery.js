@@ -32,16 +32,14 @@ router.post('/', upload.array('files', 5), async (req, res, next) => {
     if (!req.files || req.files.length === 0) {
       return res.status(500).send({ message: 'Upload fail' });
     } else {     
-      console.log(req.body,'formGroup')
-
+ 
 
       const imageUrls = [];
 
       for (const file of req.files) {
-        imageUrls.push('http://localhost:3000/images/' + file.filename);
+        imageUrls.push('images/' + file.filename);
  
       }
-       console.log(imageUrls,'imageUrls')
       req.body.imageUrls = imageUrls;
       const gallery =    await Gallery.create({
         imageUrl:imageUrls,
