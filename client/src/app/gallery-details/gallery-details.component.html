@@ -1,0 +1,16 @@
+<a [routerLink]="['/gallery']"><h3>Upload again!</h3></a>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title> Ttile :  {{gallery.imageTitle}}</mat-card-title>
+  </mat-card-header>
+  <div class="d-flex">
+    <div *ngFor="let item of gallery.imageUrl" >
+      <img mat-card-image src="http://localhost:3000/{{item}}" alt="Photo of a Shiba Inu">
+
+    </div>
+  </div>
+
+  <mat-card-content>
+    <p> imageDesc :{{gallery.imageDesc}}</p>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,19 @@
+.example-card {
+  max-width: 600px;
+}
+img.mat-mdc-card-image.mdc-card__media {
+  max-width: 117px;
+
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+
+}
+@media (max-width: 800px ){
+  .d-flex {
+    display: grid;
+    justify-content: center;
+
+  }
+}
